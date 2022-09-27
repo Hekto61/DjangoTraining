@@ -1,0 +1,14 @@
+<h1>Список олимпиад</h1>
+
+    <head>
+        <title>Олимпиады</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    </head>
+
+{%for olimp in olimps%}
+    <hr>
+    Name: {{olimp.Title}}<br>
+    Description: {{olimp.Description}}
+    <hr>
+{%endfor%}
