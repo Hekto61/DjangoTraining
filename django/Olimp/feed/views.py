@@ -4,5 +4,9 @@ from .models import Olimp
 
 def olimp_lists(request):
     olimps = Olimp.objects.all()
-    return render(request,'feed/olimp_lists.html' ,{'olimps': olimps})
+    s=[]
+    for olimp in olimps:
+        if 'inf' in olimp.tags:
+            s.append(olimp)
+    return render(request,'feed/olimp_lists.html' ,{'s': s})
 

@@ -6,7 +6,7 @@ class Olimp(models.Model):
     Date_Start = models.DateTimeField(blank=True,null=True)
     Date_End = models.DateTimeField(blank=True,null=True)
     Site = models.URLField(blank=True)
-    #tags = models.CharField(max_length=200, blank=True)
+    tags = models.CharField(max_length=200, blank=True)
     
     def __str__(self):
         return self.Title
