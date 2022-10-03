@@ -1,3 +1,5 @@
+<html>
+
 <h1>Список олимпиад</h1>
 
     <head>
@@ -6,9 +8,36 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     </head>
 
+<!--
 {%for olimp in s%}
     <hr>
     Name: {{olimp.Title}}<br>
     Description: {{olimp.Description}}
     <hr>
 {%endfor%}
+-->
+
+Имя: {{name}}<br>
+Роль: {{role}}<br>
+Таблица:<br>
+
+
+{%for row in table%}
+    {%for x in row%}
+        {{x}}
+
+    {%endfor%}
+    <br>
+{%endfor%}
+
+
+<!--
+
+{%for row in table%}
+    {{row}}
+    <br>
+{%endfor%}
+-->
+
+
+</html>
