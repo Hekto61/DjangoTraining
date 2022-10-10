@@ -1,0 +1,52 @@
+
+
+h1 {
+    color: #DC143C;
+    font-family: 'Lobster';
+    background-color: #66CDAA;
+    display: flex;
+    justify-content: center;
+    font-size: 90px;
+    line-height: 140px;
+}
+
+
+.negr {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #66CDAA;    
+
+
+}
+
+
+.Admen {
+    color: #B22222;
+    font-size: 28px;
+
+    font-family: 'Comic Sans MS';
+    background-color: #009F9F;
+	margin-right: 40px;
+	width: 200px;
+	display: flex;
+	
+	justify-content: center;    
+}
+
+.olimp {
+
+    color: #B22222;
+
+    font-size: 28px;
+
+    font-family: 'Comic Sans MS';
+    background-color: #009F9F;
+
+   	width: 200px;
+   	display: flex;
+   	
+   	justify-content: center;   
+
+
+
+}

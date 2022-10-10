@@ -1,0 +1,61 @@
+{%load static%}
+<html>
+<h1>Список олимпиад</h1>
+    <br>
+    <head>
+        <title>Олимпиады</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/olimp.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+        <!--
+        {%for olimp in s%}
+            <hr>
+            Name: {{olimp.Title}}<br>
+            Description: {{olimp.Description}}
+            <hr>
+        {%endfor%}
+        -->
+        <div class='negr'>
+            <div class='Admen'>
+                Имя: {{name}}<br>
+                Роль: {{role}}<br>
+            </div>
+        </div>
+        <!--
+        Таблица:<br>
+        
+        
+        {%for row in table%}
+            {%for x in row%}
+                <font size="5" color={{colors}} face="serif">{{x}}</font>
+        
+            {%endfor%}
+            <br>
+        {%endfor%}
+        <br>
+        
+        Брух:<br>
+        {%for row in bruh%}
+            {%for x in row%}
+                <font size="5" color={{colors}} face="serif">{{x}}</font>
+        
+            {%endfor%}
+            <br>
+        {%endfor%}        
+        
+        -->
+        
+        {%for row in s%}
+        <div class='olimp'>
+            {{row}}
+            <br>
+        </div>
+        {%endfor%}
+
+
+    </body>
+</html>
