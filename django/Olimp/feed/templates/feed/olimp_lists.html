@@ -19,15 +19,19 @@
             <hr>
         {%endfor%}
         -->
-        
-        Имя: {{name}}<br>
-        Роль: {{role}}<br>
+        <div class='negr'>
+            <div class='Admen'>
+                Имя: {{name}}<br>
+                Роль: {{role}}<br>
+            </div>
+        </div>
+        <!--
         Таблица:<br>
         
         
-        {%for row in randommass%}
+        {%for row in table%}
             {%for x in row%}
-                {{x}}
+                <font size="5" color={{colors}} face="serif">{{x}}</font>
         
             {%endfor%}
             <br>
@@ -43,13 +47,15 @@
             <br>
         {%endfor%}        
         
-        <!--
+        -->
         
-        {%for row in table%}
+        {%for row in s%}
+        <div class='olimp'>
             {{row}}
             <br>
+        </div>
         {%endfor%}
-        -->
+
 
     </body>
 </html>
