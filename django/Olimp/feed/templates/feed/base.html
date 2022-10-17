@@ -1,0 +1,24 @@
+{%load static%}
+<html>
+<h1>Список олимпиад</h1>
+    <br>
+    <head>
+        <title>Олимпиады</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/olimp.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+        <script src='http://use.awesome.com/13327cdab7.js'></script>
+        
+    </head>
+    <body>
+
+        <a class="btn btn-default" href={% url 'olimp_new' %} aria-label="Настройки" title='тебе мало что ли?'>
+        <i class="fa fa-cog" aria-hidden="true">Добавить</i></a><br>
+
+
+        {%block content%}
+        {%endblock%}
+
+    </body>
+</html>

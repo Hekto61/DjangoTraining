@@ -1,23 +1,5 @@
-<!--
-{%load static%}
-<html>
-<h1>Список олимпиад</h1>
-    <br>
-    <head>
-        <title>Олимпиады</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/olimp.css' %}">
-        <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-
-    
-
-    </body>
-</html>
--->
-
+{%extends 'feed/base.html'%}
+     {%block content%}
 
 
     <h1>New post</h1>
@@ -25,3 +7,7 @@
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">Храни тебя Господь</button>
     </form>
+
+
+
+{%endblock%}

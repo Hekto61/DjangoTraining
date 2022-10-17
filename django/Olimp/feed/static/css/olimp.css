@@ -36,17 +36,12 @@ h1 {
 .olimp {
 
     color: #B22222;
-
     font-size: 28px;
-
-    font-family: 'Comic Sans MS';
-    background-color: #009F9F;
-
-   	width: 200px;
-   	display: flex;
-   	
-   	justify-content: center;   
-
-
-
+	
+	border: 5px solid #B22222;
+	background-color: #009F9F;
+	marign: 5px;
+	text-align: center;
+	   
+    
 }
