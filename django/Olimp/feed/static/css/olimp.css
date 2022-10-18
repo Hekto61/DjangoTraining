@@ -8,6 +8,7 @@ h1 {
     justify-content: center;
     font-size: 90px;
     line-height: 140px;
+    
 }
 
 
@@ -34,14 +35,37 @@ h1 {
 }
 
 .olimp {
-
     color: #B22222;
     font-size: 28px;
-	
 	border: 5px solid #B22222;
 	background-color: #009F9F;
 	marign: 5px;
 	text-align: center;
-	   
-    
 }
+
+
+.olimp_desc {
+    color: #B22222;
+    font-size: 28px;
+    border: 5px solid #B22222;
+    background-color: #009F9F;
+    marign: 10px;
+
+}
+
+.olimp a {
+    color: #B22222;
+}
+
+.olimp_desc a {
+    color: #B22222;
+}
+
+.Admen a {
+    color: #B22222;
+}
+
+h1 a {
+    color: #B22222;
+}
+

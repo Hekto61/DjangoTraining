@@ -1,6 +1,6 @@
 {%load static%}
 <html>
-<h1>Список олимпиад</h1>
+
     <br>
     <head>
         <title>Олимпиады</title>
@@ -12,9 +12,14 @@
         
     </head>
     <body>
-
+        <h1><a href='/'>Список олимпиад</h1></a>
+        
         <a class="btn btn-default" href={% url 'olimp_new' %} aria-label="Настройки" title='тебе мало что ли?'>
         <i class="fa fa-cog" aria-hidden="true">Добавить</i></a><br>
+        
+        
+        
+        <br>
 
 
         {%block content%}

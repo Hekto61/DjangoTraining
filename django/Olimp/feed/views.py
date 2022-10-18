@@ -1,17 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Olimp
 import random
 from .forms import PostForm
-from django.shortcuts import redirect
-# Create your views here.
 
 
-def print_Matrix(A): 
-    print()
-    for row in A:
-        for x in row:
-            print('{:2d}'.format(x), end='')
-        print()
+
+def olimp_detail(request,pk):
+    olimp = get_object_or_404(Olimp, pk=pk)
+    return render(request, 'feed/olimp_detail.html', {'olimp': olimp})
 
 
 

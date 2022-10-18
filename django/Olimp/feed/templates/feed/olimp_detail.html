@@ -1,0 +1,11 @@
+{%extends 'feed/base.html'%}
+     {%block content%}
+        <div class='olimp_desc'>
+            Название: {{olimp.Title}}<br>
+            Описание: {{olimp.Description}}<br>
+            Начало олимпиады: {{olimp.Date_Start}}<br>
+            Окончание олимпиады: {{olimp.Date_End}}<br>
+            Сайт олимпиады: <a href='{{olimp.Site}}'>{{olimp.Site}}</a><br>
+            Предмет олимпиады: {{olimp.Tags}}<br>
+        </div>
+{%endblock%}

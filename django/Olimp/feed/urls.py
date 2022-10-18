@@ -5,5 +5,6 @@ from . import views
 urlpatterns = [
     path('', views.olimp_lists, name="olimp_lists"),
     path('new/', views.olimp_new, name="olimp_new"),
+    path('olimp/<int:pk>/', views.olimp_detail, name="olimp_detail"),
     
 ]
