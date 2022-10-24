@@ -1,0 +1,26 @@
+{%extends 'feed/base.html'%}
+     {%block content%}
+    <!--
+    <div class='negr'>
+        <div class='Admen'>
+            <p>Имя:<a href='https://github.com/Hekto61' style="color: #B22222"> {{name}}</a><br>
+            Роль: {{role}}<br><p>
+        </div>
+        -->
+    </div>
+    <br>
+    <div>
+        {%for row in s%}
+        <div class='col-xs-12 col-sm-12 col-md-6 col-lg-4'>
+            <div class='olimp'>
+                <i class="fa fa-shield"><a href='{%url 'user_detail' pk=row.pk%}' alink="#B22222"> Название: {{row.Name}} {{row.Surname}}</a></i><br>
+                
+                
+            </div>
+        <br>
+        </div>
+        {%endfor%}
+    </div>
+
+    {%endblock%}
+

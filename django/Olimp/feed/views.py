@@ -1,13 +1,30 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Olimp
+from .models import Olimp, Trier
 import random
-from .forms import PostForm
+from .forms import PostForm, Student
 
 
 
 def olimp_detail(request,pk):
     olimp = get_object_or_404(Olimp, pk=pk)
     return render(request, 'feed/olimp_detail.html', {'olimp': olimp})
+
+
+
+def user_detail(request,pk):
+    trier = get_object_or_404(Trier, pk=pk)
+    return render(request, 'feed/user_detail.html', {'trier': trier})
+
+
+def user_lists(request):
+    users = Olimp.objects.all()
+    s=[]
+    for olimp in users:
+#        if 'inf' or 'mat' in olimp.tags:
+        s.append(olimp)
+
+    return render(request,'feed/user_lists.html' ,{'s': s})
+
 
 
 
@@ -48,3 +65,22 @@ def olimp_new(request):
             return redirect('olimp_lists')
     else:
         return render(request, 'feed/olimp_add.html', {'form': form})
+
+
+
+
+
+
+def add_User(request):
+    form = Student()
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.save()
+            return redirect('user_lists')
+    else:
+        return render(request, 'feed/user_add.html', {'form': form})
+
+
+

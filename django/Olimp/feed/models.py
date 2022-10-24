@@ -10,3 +10,16 @@ class Olimp(models.Model):
     
     def __str__(self):
         return self.Title
+    
+    
+    
+class Trier(models.Model):
+    Name = models.CharField(max_length=100)
+    LastName = models.CharField(max_length=100)
+    SecondName = models.CharField(max_length=100)
+    Form = models.IntegerField()
+    OlimpTry = models.ForeignKey(Olimp, on_delete = models.CASCADE)
+    
+    
+    def __str__(self):
+        return self.Name, self.LastName
