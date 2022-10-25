@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Olimp, Trier
 import random
-from .forms import PostForm, Student
+from .forms import PostForm, Students
 
 
 
@@ -71,16 +71,17 @@ def olimp_new(request):
 
 
 
-def add_User(request):
-    form = Student()
+def user_new(request):
+    
     if request.method == "POST":
-        form = PostForm(request.POST)
+        form = Students(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
             post.save()
             return redirect('user_lists')
     else:
-        return render(request, 'feed/user_add.html', {'form': form})
+        form = Students()
+    return render(request, 'feed/user_add.html', {'form': form})
 
 
 

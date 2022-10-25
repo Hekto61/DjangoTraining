@@ -11,6 +11,6 @@ class PostForm(forms.ModelForm):
         
 class Students(forms.ModelForm):
 
-    class A:
+    class Meta:
         model = Trier
-        fields = ('Name', 'Surname','Olympics')
+        fields = ('Name', 'LastName','Olympics')
