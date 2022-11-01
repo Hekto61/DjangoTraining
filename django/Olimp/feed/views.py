@@ -17,11 +17,11 @@ def user_detail(request,pk):
 
 
 def user_lists(request):
-    users = Olimp.objects.all()
+    users = Trier.objects.all()
     s=[]
-    for olimp in users:
+    for trier in users:
 #        if 'inf' or 'mat' in olimp.tags:
-        s.append(olimp)
+        s.append(trier)
 
     return render(request,'feed/user_lists.html' ,{'s': s})
 

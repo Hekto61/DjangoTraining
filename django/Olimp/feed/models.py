@@ -22,4 +22,14 @@ class Trier(models.Model):
     
     
     def __str__(self):
-        return self.Name, self.LastName
+        return self.Name+' '+self.LastName
+    
+    
+class Olimp_Trier(models.Model):
+    Olimp = models.ForeignKey(Olimp, on_delete = models.CASCADE)
+    User = models.ForeignKey(Trier, on_delete = models.CASCADE)
+    
+    olimpuser = {Olimp: User}
+    
+    def __str__(self):
+        return self.Olimp    
