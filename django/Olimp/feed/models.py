@@ -19,17 +19,17 @@ class Trier(models.Model):
     SecondName = models.CharField(max_length=100)
     Fomka = models.IntegerField(blank=True,null=True)
     Olympics = models.ForeignKey(Olimp, on_delete = models.CASCADE)
-    
+    #Olimp_Set = models.ManyToManyField(Olimp)
     
     def __str__(self):
         return self.Name+' '+self.LastName
     
     
 class Olimp_Trier(models.Model):
-    Olimp = models.ForeignKey(Olimp, on_delete = models.CASCADE)
-    User = models.ForeignKey(Trier, on_delete = models.CASCADE)
+    Olimp = models.ManyToManyField(Olimp,)# on_delete = models.CASCADE)
+    User = models.ManyToManyField(Trier,)# on_delete = models.CASCADE)
     
-    olimpuser = {Olimp: User}
+
     
     def __str__(self):
-        return self.Olimp    
+        return self.User    

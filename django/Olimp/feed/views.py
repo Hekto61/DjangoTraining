@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Olimp, Trier
+from .models import Olimp, Trier, Olimp_Trier
 import random
 from .forms import PostForm, Students
 
@@ -18,10 +18,11 @@ def user_detail(request,pk):
 
 def user_lists(request):
     users = Trier.objects.all()
+    
     s=[]
     for trier in users:
-#        if 'inf' or 'mat' in olimp.tags:
-        s.append(trier)
+        
+        s.append(Olimp_Trier.User.add(trier))
 
     return render(request,'feed/user_lists.html' ,{'s': s})
 
