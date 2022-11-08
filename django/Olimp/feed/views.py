@@ -13,7 +13,11 @@ def olimp_detail(request,pk):
 
 def user_detail(request,pk):
     trier = get_object_or_404(Trier, pk=pk)
-    return render(request, 'feed/user_detail.html', {'trier': trier})
+    olimp = list({trier.Olympics1,trier.Olympics2, trier.Olympics3,})
+#    for i in range(len(olimp)):
+#        olimp[i] = olimp[i][:-1]
+    
+    return render(request, 'feed/user_detail.html', {'trier': trier, 'olimp': olimp})
 
 
 def user_lists(request):
@@ -22,7 +26,7 @@ def user_lists(request):
     s=[]
     for trier in users:
         
-        s.append(Olimp_Trier.User.add(trier))
+        s.append(trier)
 
     return render(request,'feed/user_lists.html' ,{'s': s})
 

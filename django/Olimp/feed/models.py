@@ -18,8 +18,10 @@ class Trier(models.Model):
     LastName = models.CharField(max_length=100)
     SecondName = models.CharField(max_length=100)
     Fomka = models.IntegerField(blank=True,null=True)
-    Olympics = models.ForeignKey(Olimp, on_delete = models.CASCADE)
-    #Olimp_Set = models.ManyToManyField(Olimp)
+    Olympics1 = models.ForeignKey(Olimp, on_delete = models.CASCADE, related_name='First_olimp')
+    Olympics2 = models.ForeignKey(Olimp, on_delete = models.CASCADE, related_name='Olympics2')#, on_delete = models.CASCADE, related_name='Second_olimp')
+    Olympics3 = models.ForeignKey(Olimp, on_delete = models.CASCADE, related_name='Olympics3')
+    
     
     def __str__(self):
         return self.Name+' '+self.LastName

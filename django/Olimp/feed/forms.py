@@ -13,4 +13,4 @@ class Students(forms.ModelForm):
 
     class Meta:
         model = Trier
-        fields = ('Name', 'LastName','Olympics')
+        fields = ('Name', 'LastName', 'Fomka','Olympics1','Olympics2','Olympics3',)
