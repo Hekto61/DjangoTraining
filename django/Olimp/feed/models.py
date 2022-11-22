@@ -27,11 +27,3 @@ class Trier(models.Model):
         return self.Name+' '+self.LastName
     
     
-class Olimp_Trier(models.Model):
-    Olimp = models.ManyToManyField(Olimp,)# on_delete = models.CASCADE)
-    User = models.ManyToManyField(Trier,)# on_delete = models.CASCADE)
-    
-
-    
-    def __str__(self):
-        return self.User    

@@ -9,5 +9,6 @@ urlpatterns = [
     path('user/<int:pk>/', views.user_detail, name="user_detail"),
     path('newUser/', views.user_new, name="user_new"),
     path('users/', views.user_lists, name="user_lists"),
+    path('search/', views.olimp_search, name="olimp_search"),
     
 ]

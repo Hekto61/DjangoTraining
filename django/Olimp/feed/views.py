@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Olimp, Trier, Olimp_Trier
+from .models import Olimp, Trier
 import random
-from .forms import PostForm, Students
+from .forms import PostForm, Students, SearchForms
 
 
 
@@ -13,7 +13,7 @@ def olimp_detail(request,pk):
 
 def user_detail(request,pk):
     trier = get_object_or_404(Trier, pk=pk)
-    olimp = list({trier.Olympics1,trier.Olympics2, trier.Olympics3,})
+    olimp = ", ".join(list(map(str,list({trier.Olympics1,trier.Olympics2, trier.Olympics3,}))))
 #    for i in range(len(olimp)):
 #        olimp[i] = olimp[i][:-1]
     
@@ -87,6 +87,28 @@ def user_new(request):
     else:
         form = Students()
     return render(request, 'feed/user_add.html', {'form': form})
+
+
+
+
+
+
+def olimp_search(request):
+    form = SearchForms()
+    query = None
+    result = []
+    if 'query' in request.GET:
+        form = SearchForms(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            result = Olimp.objects.filter(Title__contains=query)
+    return render(request, 'feed/olimp_search.html', {'form': form, 'query': query, 'result': result })
+
+
+
+
+
+
 
 
 

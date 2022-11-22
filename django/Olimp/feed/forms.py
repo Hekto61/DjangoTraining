@@ -14,3 +14,9 @@ class Students(forms.ModelForm):
     class Meta:
         model = Trier
         fields = ('Name', 'LastName', 'Fomka','Olympics1','Olympics2','Olympics3',)
+        
+        
+        
+
+class SearchForms(forms.Form):
+    querry = forms.CharField(label="Название олимпиады")

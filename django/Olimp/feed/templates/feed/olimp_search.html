@@ -1,0 +1,21 @@
+{%extends 'feed/base.html'%}
+    {%block content%}
+        {%if query%}
+            <h2>Найдены олимпиады c сочетанием {{query}}</h2>
+            <ul>
+            {%for olimp in result%}
+                <li>{{olimp.Title}} - <a href="{%url 'olimp_detail' pk=olimp.pk%}"><i class="fa-solid fa-wand-sparkles"></i></a></li>
+            {%endfor%}
+            </ul>
+        {%else%}
+        
+        <h2>Найти олимпиаду</h2>
+        <form action="." method="get">
+        {{form.as_p}}
+        <input type="submit" value="Найти">
+
+        </form>
+        {%endif%}
+        
+    {%endblock%}
+
