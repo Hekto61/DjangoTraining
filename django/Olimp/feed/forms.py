@@ -19,4 +19,4 @@ class Students(forms.ModelForm):
         
 
 class SearchForms(forms.Form):
-    querry = forms.CharField(label="Название олимпиады")
+    query = forms.CharField(label="Название олимпиады")

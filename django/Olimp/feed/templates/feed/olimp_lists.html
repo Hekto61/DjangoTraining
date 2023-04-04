@@ -19,9 +19,8 @@
         {%for row in s%}
         <div class='col-xs-12 col-sm-12 col-md-6 col-lg-4'>
             <div class='olimp'>
-                <i class="fa fa-shield"><a href='{%url 'olimp_detail' pk=row.pk%}' alink="#B22222"> Название: {{row.Title}}</a></i><br>
-                <i class="fa-solid fa-download">Время: {{row.Date_Start}} - <br> {{row.Date_End}}</i><br>
-                
+                    <i class="fa fa-shield"><a href='{%url 'olimp_detail' pk=row.pk%}' alink="#B22222"> Название: {{row.Title}}</a></i><br>
+                    <i class="fa-solid fa-download">Время: {{row.Date_Start}} - <br> {{row.Date_End}}</i><br>
             </div>
         <br>
         </div>
